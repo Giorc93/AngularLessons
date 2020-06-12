@@ -1,0 +1,15 @@
+<div class="container">
+  <h2>Service Consuming</h2>
+  <table>
+    <tr>
+      <th>Code</th>
+      <th>Description</th>
+      <th>Price</th>
+    </tr>
+    <tr *ngFor="let art of artList">
+      <td>{{ art.code }}</td>
+      <td>{{ art.description }}</td>
+      <td>{{ art.price }}</td>
+    </tr>
+  </table>
+</div>

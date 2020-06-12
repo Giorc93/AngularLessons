@@ -1,0 +1,15 @@
+<!--Sending more complex data from parent to child-->
+<div class="container">
+  <table>
+    <tr>
+      <th>Code</th>
+      <th>Price</th>
+      <th>Description</th>
+    </tr>
+    <tr *ngFor="let art of data">
+      <td>{{ art.code }}</td>
+      <td>{{ art.description }}</td>
+      <td>{{ art.price }}</td>
+    </tr>
+  </table>
+</div>

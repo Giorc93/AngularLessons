@@ -1,0 +1,28 @@
+<div>
+  <h1>Administración de artículos</h1>
+  <table border="1" *ngIf="hayRegistros(); else sinarticulos">
+    <tr>
+      <td>Codigo</td>
+      <td>Descripcion</td>
+      <td>Precio</td>
+      <td>Borrar</td>
+      <td>Seleccionar</td>
+    </tr>
+    <tr *ngFor="let art of articulos">
+      <td>{{ art.code }}</td>
+      <td>{{ art.description }}</td>
+      <td>{{ art.price }}</td>
+      <td><button (click)="baja(art.code)">Borrar?</button></td>
+      <td><button (click)="seleccionar(art.code)">Seleccionar</button></td>
+    </tr>
+  </table>
+  <ng-template #sinarticulos><p>No hay articulos.</p></ng-template>
+  <div>
+    <p>descripcion:<input type="text" [(ngModel)]="art.description" /></p>
+    <p>precio:<input type="number" [(ngModel)]="art.price" /></p>
+    <p>
+      <button (click)="alta()">Agregar</button>
+      <button (click)="modificacion()">Modificar</button>
+    </p>
+  </div>
+</div>

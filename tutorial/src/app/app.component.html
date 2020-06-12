@@ -1,0 +1,38 @@
+<form action="">
+  <p>
+    <label for="code">Code</label><br />
+    <input type="number" name="code" id="code" [(ngModel)]="code" />
+  </p>
+  <p>
+    <label for="description">Description</label><br />
+    <input
+      type="text"
+      name="description"
+      id="description"
+      [(ngModel)]="description"
+    />
+  </p>
+  <p>
+    <label for="price">Price</label><br />
+    <input type="number" name="price" id="price" [(ngModel)]="price" />
+  </p>
+  <button (click)="addArt()">Add</button>
+  <button (click)="modArt()">Modify</button>
+</form>
+
+<table *ngIf="arts.length > 0">
+  <tr>
+    <th>Code</th>
+    <th>Description</th>
+    <th>Price</th>
+    <th>Delete</th>
+    <th>Select</th>
+  </tr>
+  <tr *ngFor="let artc of arts">
+    <td>{{ artc.code }}</td>
+    <td>{{ artc.description }}</td>
+    <td>{{ artc.price }}</td>
+    <td><button (click)="deleteArt(artc.code)">Delete</button></td>
+    <td><button (click)="selectArt(artc.code)">Select</button></td>
+  </tr>
+</table>

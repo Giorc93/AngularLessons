@@ -1,0 +1,12 @@
+<div
+  class="card"
+  style="width: 18rem; margin: 1rem;"
+  *ngFor="let userData of user"
+>
+  <img src="{{ userData.foto }}" class="card-img-top" alt="..." />
+  <div class="card-body">
+    <h5 class="card-title">{{ userData.nombre }}</h5>
+    <p class="card-text">{{ userData.mail }}<br /></p>
+    <a href="#" class="btn btn-primary" (click)="alert()">Otra persona?</a>
+  </div>
+</div>

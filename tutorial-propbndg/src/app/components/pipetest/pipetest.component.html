@@ -1,0 +1,18 @@
+<h1>Numbers in spa</h1>
+<ul>
+  <li *ngFor="let valor of vector">
+    {{ valor | testpipe }}
+  </li>
+</ul>
+<h1>Numbers in eng</h1>
+<ul>
+  <li *ngFor="let valor of vector">
+    {{ valor | testpipe: "eng" }}
+  </li>
+</ul>
+<h1>Numbers in port</h1>
+<ul>
+  <li *ngFor="let valor of vector">
+    {{ valor | testpipe: "port" }}
+  </li>
+</ul>

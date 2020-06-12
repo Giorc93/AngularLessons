@@ -1,0 +1,16 @@
+<div class="container">
+  <h2>Service Consuming</h2>
+  <table>
+    <tr>
+      <th>Code</th>
+      <th>Description</th>
+      <th>Price</th>
+    </tr>
+    <tr *ngFor="let art of articlesWeb">
+      <td>{{ art.codigo }}</td>
+      <td>{{ art.descripcion }}</td>
+      <td>{{ art.precio }}</td>
+    </tr>
+  </table>
+  <button (click)="getArticles()">Get Articles</button>
+</div>
